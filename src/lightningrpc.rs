@@ -294,7 +294,7 @@ impl LightningRPC {
         cltv: Option<u64>,
         fromid: Option<&str>,
         fuzzpercent: Option<f64>,
-        seed: Option<&str>,
+        exclude: Option<Vec<String>>,
     ) -> Result<responses::GetRoute, Error> {
         self.call(
             "getroute",
@@ -305,7 +305,7 @@ impl LightningRPC {
                 cltv,
                 fromid,
                 fuzzpercent,
-                seed,
+                exclude,
             },
         )
     }

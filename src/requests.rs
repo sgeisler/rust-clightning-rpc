@@ -193,7 +193,7 @@ pub struct GetRoute<'a> {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub fuzzpercent: Option<f64>,
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub seed: Option<&'a str>,
+    pub exclude: Option<Vec<String>>,
 }
 
 /// 'connect' command
