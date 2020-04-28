@@ -253,13 +253,13 @@ impl LightningRPC {
     }
 
     /// Show outgoing payments.
-    pub fn listpayments(
+    pub fn listsendpays(
         &self,
         bolt11: Option<&str>,
         payment_hash: Option<&str>,
     ) -> Result<responses::ListPayments, Error> {
         self.call(
-            "listpayments",
+            "listsendpays",
             requests::ListPayments {
                 bolt11,
                 payment_hash,
